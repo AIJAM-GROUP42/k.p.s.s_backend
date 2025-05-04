@@ -20,3 +20,9 @@ class QuizResult(Base):
 
     def __repr__(self):
         return f"<QuizResult(id={self.id}, user_id={self.user_id}, lesson_id={self.lesson_id})>"
+
+from models.user import User
+from models.lesson import Lesson
+
+QuizResult.user = relationship("User", back_populates="quiz_results")
+QuizResult.lesson = relationship("Lesson", back_populates="quiz_results")
