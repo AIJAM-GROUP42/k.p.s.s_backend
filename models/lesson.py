@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, String, Text
 from sqlalchemy.orm import relationship
+from models.quiz_result import QuizResult
 from models.base import Base
 
 class Lesson(Base):

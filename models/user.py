@@ -1,7 +1,7 @@
-
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 from models.base import Base
+
 
 class User(Base):
     __tablename__ = "users"
@@ -13,7 +13,8 @@ class User(Base):
     password = Column(String, nullable=False)
     total_score = Column(Integer, default=0)
 
-    quiz_results = relationship("QuizResult", back_populates="user")
-
     def __repr__(self):
         return f"<User(id={self.id}, email='{self.email}')>"
+
+from models.quiz_result import QuizResult  # import sonra gelsin
+User.quiz_results = relationship("QuizResult", back_populates="user")

@@ -15,6 +15,8 @@ load_dotenv(dotenv_path=".env")
 from config.settings import settings
 from models.base import Base
 from models import user, lesson, quiz_result
+#veya from models import User, QuizResult, Lesson  # modellerin hepsi burada tanıtılsın
+
 
 config = context.config
 fileConfig(config.config_file_name)
