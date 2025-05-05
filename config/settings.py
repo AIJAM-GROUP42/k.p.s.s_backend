@@ -9,7 +9,8 @@ class Settings(BaseSettings):
     DATABASE_URL: str
     SECRET_KEY: str
     ALGORITHM: str = "HS256"  # JWT için varsayılan algoritma
-
+    GEMINI_API_KEY: str
+    
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
