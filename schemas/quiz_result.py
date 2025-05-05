@@ -15,3 +15,8 @@ class QuizResultResponse(BaseModel):
 
     class Config:
         orm_mode = True
+
+class QuizItem(BaseModel):
+    question: str
+    options: List[str]
+    answer: str  
