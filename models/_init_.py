@@ -4,3 +4,4 @@ from .quiz_result import QuizResult
 from .base import Base
 from .user import User
 from .quiz_result import QuizResult
+from .prompt import Prompt

@@ -10,3 +10,13 @@ class UserCreate(BaseModel):
 class UserLogin(BaseModel):
     email: EmailStr
     password: str
+
+class UserResponse(BaseModel):
+    id: int
+    name: str
+    surname: str
+    email: EmailStr
+    total_score: int
+
+    class Config:
+        orm_mode = True
