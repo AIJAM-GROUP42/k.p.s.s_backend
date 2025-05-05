@@ -16,5 +16,12 @@ class User(Base):
     def __repr__(self):
         return f"<User(id={self.id}, email='{self.email}')>"
 
-from models.quiz_result import QuizResult  # import sonra gelsin
+
+from models.quiz_result import QuizResult
+from models.prompt import Prompt 
+from models.badge import UserBadge  
+
+
 User.quiz_results = relationship("QuizResult", back_populates="user")
+User.prompts = relationship("Prompt", back_populates="user")  
+User.badges = relationship("UserBadge", back_populates="user")  
