@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from app.schemas.prompt import PromptRequest, PromptResponse
-from app.services.llm_client import generate_llm_content
-from app.services.lesson_service import save_prompt_to_db
-from app.database.session import get_db
-from app.services.auth import get_current_user  # JWT doğrulama için
-from app.models.user import User
+from schemas.prompt import PromptRequest, PromptResponse
+from services.llm_client import generate_llm_content
+from services.lesson_service import save_prompt_to_db
+from database.session import get_db
+from services.auth import get_current_user  # JWT doğrulama için
+from models.user import User
 
 router = APIRouter(prefix="/prompt", tags=["Prompt"])
 
