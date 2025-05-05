@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from app.schemas.prompt import PromptRequest
-from app.models.prompt import Prompt
+from schemas.prompt import PromptRequest
+from models.prompt import Prompt
 from datetime import datetime
 
 

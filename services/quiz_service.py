@@ -1,10 +1,10 @@
 from sqlalchemy.orm import Session
 from datetime import datetime
-from app.schemas.quiz_result import QuizSubmitRequest
-from app.models.quiz_result import QuizResult
-from app.models.user import User
-from app.services.badge_service import check_and_assign_badges
-from app.services.llm_client import generate_quiz_with_gemini
+from schemas.quiz_result import QuizSubmitRequest
+from models.quiz_result import QuizResult
+from models.user import User
+from services.badge_service import check_and_assign_badges
+from services.llm_client import generate_quiz_with_gemini
 
 
 def generate_quiz_questions(topic: str = "Genel Kültür") -> list[dict]:      #örnekleme için genel kültür

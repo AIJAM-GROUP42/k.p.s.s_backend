@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from app.models.badge import Badge, UserBadge
-from app.models.user import User
+from models.badge import Badge, UserBadge
+from models.user import User
 from datetime import datetime
 
 

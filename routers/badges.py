@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from app.database.session import get_db
-from app.schemas.badge import BadgeResponse
-from app.models.badge import UserBadge, Badge
+from database.session import get_db
+from schemas.badge import BadgeResponse
+from models.badge import UserBadge, Badge
 
 router = APIRouter(prefix="/badges", tags=["Badges"])
 
