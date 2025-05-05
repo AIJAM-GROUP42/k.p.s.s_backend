@@ -6,6 +6,8 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi.openapi.models import APIKey
 from fastapi.openapi.utils import get_openapi
 from routers import quiz
+from routers import badges
+
 
 
 app = FastAPI()
@@ -20,3 +22,4 @@ app.include_router(lesson.router)
 
 
 app.include_router(quiz.router)
+app.include_router(badges.router)
