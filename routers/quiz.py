@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from database.session import get_db
 from models.quiz_result import QuizResult
+from models.user import User  # Import the User model
 
 # Import or define the generate_quiz function
 from services.llm_client import generate_quiz  # Example import
@@ -30,6 +31,14 @@ def submit_quiz(quiz_data: QuizSubmission, db: Session = Depends(get_db)):
         score=quiz_data.score
     )
     db.add(result)
+
+    
+    # 2. Kullanıcının toplam skorunu güncelle
+    user = db.query(User).filter(User.id == quiz_data.user_id).first()
+    if user:
+        user.total_score = (user.total_score or 0) + quiz_data.score
+        db.add(user)  # Güncellenmiş user'ı tekrar DB'ye ekliyoruz
+
     db.commit()
     db.refresh(result)
 

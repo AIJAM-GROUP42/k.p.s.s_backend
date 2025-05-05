@@ -13,7 +13,6 @@ class Lesson(Base):
 
     user_id = Column(Integer, ForeignKey("users.id"))  # FK eklendi
 
-    quiz_results = relationship("QuizResult", back_populates="lesson")
 
     def __repr__(self):
         return f"<Lesson(id={self.id}, topic='{self.topic}')>"
