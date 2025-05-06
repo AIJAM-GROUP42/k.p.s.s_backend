@@ -12,8 +12,8 @@ def generate_lesson_content(topic: str) -> tuple[str, str]:
     Konu: {topic}
 
     1. Bu konunun sade ve anlaşılır bir konu anlatımını yaz.
-    2. Bu konuyla ilgili ezberlemeyi kolaylaştıracak yaratıcı bir teknik öner:
-       - Hikayeleştirme (örnek bir kısa hikaye ile)
+    2. Bu konu için aşağıdaki tekniklerden birini (en uygun olanı) seçerek bir ezberleme yöntemi oluştur:
+       - Hikayeleştirme (kısa bir hikaye ile)
        - Akrostiş
        - Anahtar kelimelerle çağrışım
        - Hayal etme veya görsel canlandırma
